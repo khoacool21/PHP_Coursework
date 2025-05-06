@@ -17,31 +17,34 @@
             <?php unset($_SESSION['error']); ?>
         <?php endif; ?>
 
-        <form action="/Coursework/index.php?action=send_contact" method="post" class="contact-form">
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
+        <div class="card">
+            <div class="card-body">
+                <form action="/Coursework/index.php?action=send_contact" method="post" class="form-container">
+                    <div class="form-group">
+                        <label for="name" class="form-label"><i class="fas fa-user"></i> Your Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
 
-            <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label"><i class="fas fa-envelope"></i> Your Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
 
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required>
-            </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label"><i class="fas fa-heading"></i> Subject</label>
+                        <input type="text" class="form-control" id="subject" name="subject" required>
+                    </div>
 
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="10" required></textarea>
-            </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label"><i class="fas fa-align-left"></i> Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="8" required></textarea>
+                    </div>
 
-            <div class="form-actions">
-                <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
-                
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 </div> 

@@ -35,13 +35,6 @@ class Comment {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function update($comment_id, $user_id, $content) {
-        $sql = "UPDATE comments 
-                SET content = ?, updated_at = NOW() 
-                WHERE id = ? AND user_id = ?";
-        $stmt = $this->pdo->prepare($sql);
-        return $stmt->execute([$content, $comment_id, $user_id]);
-    }
 
     public function delete($comment_id, $user_id) {
         $sql = "DELETE FROM comments WHERE id = ? AND user_id = ?";
